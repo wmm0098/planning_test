@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ko"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"surface-tint":"#545f73","on-tertiary":"#ffffff","status-actual-text":"#FFFFFF","metric-negative":"#EF4444","surface-container":"#e5eeff","error-container":"#ffdad6","on-primary-fixed":"#111c2d","on-tertiary-fixed-variant":"#653e00","border-subtle":"#E2E8F0","on-tertiary-fixed":"#2a1700","store-badge-bg":"#F3E8FF","tertiary":"#201100","on-tertiary-container":"#c88000","secondary-fixed":"#ffdbcb","secondary":"#9a4614","primary-fixed-dim":"#bcc7de","on-secondary":"#ffffff","tertiary-fixed-dim":"#ffb95f","primary-container":"#1e293b","text-muted":"#64748B","text-primary":"#0F172A","on-surface":"#0b1c30","border-strong":"#CBD5E1","tertiary-container":"#3c2300","primary":"#091426","surface-bright":"#f8f9ff","outline":"#75777d","secondary-fixed-dim":"#ffb693","inverse-on-surface":"#eaf1ff","surface-container-low":"#eff4ff","takeout-badge-bg":"#EFF6FF","takeout-badge-text":"#1D4ED8","surface-canvas":"#F8FAFC","on-secondary-fixed":"#341000","secondary-container":"#fd925b","espresso-dark":"#78350F","outline-variant":"#c5c6cd","metric-negative-surface":"#FEF2F2","on-primary":"#ffffff","surface-card":"#FFFFFF","metric-positive-surface":"#ECFDF5","status-projected-bg":"#FEF3C7","inverse-primary":"#bcc7de","store-badge-text":"#6B21A8","primary-fixed":"#d8e3fb","on-background":"#0b1c30","status-projected-text":"#92400E","surface-container-highest":"#d3e4fe","background":"#f8f9ff","surface-dim":"#cbdbf5","inverse-surface":"#213145","metric-positive":"#10B981","surface-container-high":"#dce9ff","on-error-container":"#93000a","surface-variant":"#d3e4fe","on-primary-fixed-variant":"#3c475a","surface-container-lowest":"#ffffff","on-primary-container":"#8590a6","espresso-amber":"#D97706","surface-subtle":"#F1F5F9","on-error":"#ffffff","status-actual-bg":"#0F172A","error":"#ba1a1a","tertiary-fixed":"#ffddb8","surface":"#f8f9ff","on-secondary-container":"#712c00","on-surface-variant":"#45474c","on-secondary-fixed-variant":"#7a3000"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-sm":"0.5rem","space-xl":"1.75rem","space-xs":"0.25rem","gutter":"1rem","gutter-compact":"0.5rem","margin-mobile":"0.75rem","space-lg":"1.25rem","margin":"1.5rem","space-md":"0.75rem"},"fontFamily":{"metric-stat-md":["Inter"],"label-md":["Inter"],"label-sm":["Inter"],"metric-stat-lg":["Inter"],"tabular-numeric":["Inter"],"headline-xl":["Inter"],"body-sm":["Inter"],"body-md":["Inter"],"body-lg":["Inter"],"headline-lg":["Inter"],"headline-lg-mobile":["Inter"],"headline-md":["Inter"]},"fontSize":{"metric-stat-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"700"}],"label-md":["13px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.02em","fontWeight":"600"}],"metric-stat-lg":["26px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"tabular-numeric":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"500"}],"headline-xl":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"body-lg":["15px",{"lineHeight":"22px","letterSpacing":"-0.005em","fontWeight":"400"}],"headline-lg":["22px",{"lineHeight":"30px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-lg-mobile":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-md":["18px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface-canvas font-body-md text-text-primary min-h-screen"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-card shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-sm bg-surface-subtle"><div class="w-8 h-8 rounded-xl bg-primary flex items-center justify-center text-on-primary"><span class="material-symbols-outlined text-[18px]">local_cafe</span></div><div class="flex flex-col"><span class="font-headline-md text-headline-md text-primary font-bold leading-none tracking-tight">프렙 카페</span><span class="font-label-sm text-label-sm text-espresso-amber font-semibold mt-0.5">STORE ERP MVP</span></div></div><div class="px-space-md py-space-sm"><div class="px-space-sm py-space-xs rounded-xl bg-surface-canvas flex items-center justify-between"><div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-metric-positive"></span><span class="font-label-sm text-label-sm text-text-primary font-semibold">매장 영업중</span></div><span class="font-tabular-numeric text-tabular-numeric text-text-muted">단일 매장</span></div></div><nav class="px-space-sm space-y-1 mt-space-xs" data-active-classes="bg-primary-container text-on-primary font-semibold shadow-[0_1px_4px_rgba(15,23,42,0.1)]"><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors" data-path="sales-management" href="#"><span class="material-symbols-outlined text-[20px] text-espresso-amber">point_of_sale</span>판매 관리</a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl transition-colors bg-primary-container text-on-primary font-semibold shadow-[0_1px_4px_rgba(15,23,42,0.1)]" data-path="menu-profitability" href="#"><span class="material-symbols-outlined text-[20px] text-espresso-amber">query_stats</span>메뉴 수익성</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors" data-path="financial-performance" href="#"><span class="material-symbols-outlined text-[20px] text-espresso-amber">monitoring</span>기간 실적·손익</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors" data-path="inventory-control" href="#"><span class="material-symbols-outlined text-[20px] text-espresso-amber">inventory_2</span>재고 관리</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors" data-path="backup-settings" href="#"><span class="material-symbols-outlined text-[20px] text-espresso-amber">settings_backup_restore</span>백업 및 설정</a></nav></div><div class="p-space-md bg-surface-canvas m-space-sm rounded-xl"><div class="flex items-center justify-between mb-1"><span class="font-label-sm text-label-sm text-text-muted">동기화 상태</span><span class="font-label-sm text-label-sm text-espresso-dark font-semibold">실시간 로컬</span></div><div class="w-full bg-surface-dim h-1.5 rounded-full overflow-hidden"><div class="bg-espresso-amber h-full w-full rounded-full"></div></div><div class="flex items-center justify-between mt-2 pt-2"><span class="font-label-sm text-label-sm text-text-muted">버전 v1.2.0</span><span class="font-label-sm text-label-sm text-metric-positive font-medium">정상 가동</span></div></div></aside><div class="pl-64 flex flex-col min-h-screen"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-card/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-surface-subtle px-space-md py-1.5 rounded-xl"><span class="material-symbols-outlined text-[18px] text-espresso-dark">store</span><select class="bg-transparent font-label-md text-label-md text-text-primary font-semibold focus:outline-none cursor-pointer pr-1"><option selected="">프렙 카페 (단일 매장 MVP)</option></select></div><div class="hidden lg:flex items-center gap-space-xs bg-status-projected-bg text-status-projected-text px-space-md py-1 rounded-xl"><span class="material-symbols-outlined text-[16px]">date_range</span><span class="font-label-sm text-label-sm font-semibold">기록 기간: 2025.07.01 ~ 2026.09.18 마감 | 9.19~ 미마감</span></div></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-1.5 font-label-md text-label-md text-text-primary px-space-sm"><span class="material-symbols-outlined text-[18px] text-text-muted">schedule</span><span class="font-semibold">2026년 9월 18일 (금)</span><span class="px-1.5 py-0.5 rounded-lg bg-metric-positive-surface text-metric-positive font-label-sm text-label-sm font-bold">영업중</span></div><div class="flex items-center gap-space-xs"><button class="w-9 h-9 rounded-xl flex items-center justify-center text-text-muted hover:bg-surface-subtle hover:text-text-primary transition-colors" title="데이터 백업 및 복원" type="button"><span class="material-symbols-outlined text-[20px]">backup</span></button><button class="w-9 h-9 rounded-xl flex items-center justify-center text-text-muted hover:bg-surface-subtle hover:text-text-primary transition-colors relative" title="알림 내역" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-metric-negative"></span></button></div><div class="h-6 w-px bg-border-subtle"></div><div class="flex items-center gap-space-sm pl-1"><div class="text-right hidden sm:block"><div class="font-label-md text-label-md font-semibold text-text-primary leading-none">점주 (Manager)</div><div class="font-label-sm text-label-sm text-text-muted leading-tight mt-0.5">단일 총괄 계정</div></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-border-subtle" src="https://lh3.googleusercontent.com/aida/AEtjO1Vi-AWFDozy3n5fYkA6rMqJUDBJ0h7dhMOSFa3xEdzxcdKsZJDa9tQtsjE0rN_7PJFjZ9e5OquX4m_5aTGHF_p-T6FvYTuB2jPdKm_urbqVSnbBzPb5ZOvBrosKFckqtf2W9Me8dE7oWDy5XVmELBzbrzDUiXlKXKortIrDijsMSIn4Rqt8zZS7gpNaRCili11ubupp_CCBkGkFpiA41MFtO4elFvI927Ergji2jgomchEfejWN5iFc_jcY"/></div></div></header><main class="w-full pt-16 flex-1 px-space-lg py-space-lg bg-surface-canvas"><div class="flex flex-col w-full gap-gutter">
+<!-- Header & Context Banner -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-text-primary">메뉴별 수익성 분석</span>
+<span class="px-2 py-0.5 rounded-full bg-status-actual-bg text-status-actual-text font-label-sm text-label-sm">실적 확정치</span>
+</div>
+<p class="font-body-md text-body-md text-text-muted mt-0.5">재료비·포장재비·결제수수료를 반영한 메뉴별 공헌이익과 원가율을 분석합니다.</p>
+</div>
+<!-- Quick Action Pill Group -->
+<div class="flex items-center gap-space-xs self-start md:self-auto">
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-surface-card text-text-primary font-label-md text-label-md shadow-sm hover:bg-surface-subtle transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px] text-espresso-amber">download</span>
+<span>CSV 내보내기</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-primary text-on-primary font-label-md text-label-md shadow-sm hover:bg-primary-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>원가 배부 기준 설정</span>
+</button>
+</div>
+</div>
+<!-- Critical Notice Callout Banner (PRD Section 4 & 8 requirement) -->
+<div class="flex items-start gap-space-sm p-3.5 rounded-xl bg-status-projected-bg/50 shadow-sm">
+<span class="material-symbols-outlined text-espresso-amber text-[20px] shrink-0 mt-0.5">lightbulb</span>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-md text-label-md text-espresso-dark font-semibold">공헌이익 산출 기준 안내</span>
+<p class="font-body-sm text-body-sm text-status-projected-text">
+          공통 운영비(임차료, 인건비 등)는 메뉴별로 인위적으로 배분하지 않고, 재료비·포장비·수수료만을 반영한 공헌이익(메뉴 자체의 마진)을 산출합니다. 매장 전체 손익은 
+          <a class="font-semibold underline decoration-espresso-amber hover:text-espresso-dark ml-0.5" href="#">'기간 실적·손익' 탭</a>에서 확인하세요.
+        </p>
+</div>
+</div>
+</div>
+<!-- Filters Row -->
+<div class="flex flex-wrap items-center justify-between gap-space-md p-3 rounded-xl bg-surface-card shadow-sm">
+<div class="flex flex-wrap items-center gap-space-sm">
+<!-- Period Selector -->
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-subtle text-text-primary">
+<span class="material-symbols-outlined text-[18px] text-text-muted">calendar_today</span>
+<span class="font-label-md text-label-md text-text-primary font-semibold">2026년 9월 (09.01 ~ 09.18 마감 기준)</span>
+<span class="material-symbols-outlined text-[16px] text-text-muted cursor-pointer">expand_more</span>
+</div>
+<div class="h-4 w-px bg-border-subtle hidden sm:block"></div>
+<!-- Category Filter Tabs -->
+<div class="flex items-center p-0.5 rounded-lg bg-surface-subtle" id="categoryFilter">
+<button class="category-btn px-3 py-1 rounded-md bg-surface-card font-label-md text-label-md text-text-primary font-semibold shadow-xs" data-filter="all" type="button">
+          전체 (8)
+        </button>
+<button class="category-btn px-3 py-1 rounded-md text-text-muted font-label-md text-label-md hover:text-text-primary" data-filter="beverage" type="button">
+          음료 (6)
+        </button>
+<button class="category-btn px-3 py-1 rounded-md text-text-muted font-label-md text-label-md hover:text-text-primary" data-filter="dessert" type="button">
+          디저트 (2)
+        </button>
+</div>
+</div>
+<!-- Sorting Control -->
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-text-muted">정렬:</span>
+<div class="relative inline-block">
+<select class="appearance-none pl-3 pr-8 py-1.5 rounded-lg bg-surface-subtle font-label-md text-label-md text-text-primary font-medium focus:outline-none cursor-pointer" id="sortSelect">
+<option selected="" value="profit-desc">공헌이익 순 ▼</option>
+<option value="margin-desc">마진율 높은 순 ▼</option>
+<option value="sales-desc">순매출액 순 ▼</option>
+<option value="cost-desc">원가율 높은 순 ▼</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-[18px] text-text-muted pointer-events-none">unfold_more</span>
+</div>
+</div>
+</div>
+<!-- Key Metric KPI Cards (4-column responsive) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Card 1: 총 메뉴 순매출 -->
+<div class="p-space-md rounded-xl bg-surface-card shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-text-muted">총 메뉴 순매출</span>
+<span class="px-1.5 py-0.5 rounded bg-metric-positive-surface text-metric-positive font-label-sm text-label-sm font-semibold">9.01~9.18</span>
+</div>
+<div class="my-space-xs">
+<span class="font-metric-stat-lg text-metric-stat-lg text-text-primary">12,480,000</span>
+<span class="font-tabular-numeric text-tabular-numeric text-text-muted ml-0.5">원</span>
+</div>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-text-muted">
+<span class="material-symbols-outlined text-[14px] text-metric-positive">trending_up</span>
+<span class="text-metric-positive font-semibold">전월 동기 대비 +8.4%</span>
+</div>
+</div>
+<!-- Card 2: 총 직접 변동비 -->
+<div class="p-space-md rounded-xl bg-surface-card shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-text-muted">총 직접 변동비</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-subtle text-text-muted font-label-sm text-label-sm">식재료+포장+수수료</span>
+</div>
+<div class="my-space-xs">
+<span class="font-metric-stat-lg text-metric-stat-lg text-text-primary">4,118,400</span>
+<span class="font-tabular-numeric text-tabular-numeric text-text-muted ml-0.5">원</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-text-muted pt-0.5">
+<span>식재료 81.8%</span>
+<span>포장 11.2%</span>
+<span>수수료 7.0%</span>
+</div>
+</div>
+<!-- Card 3: 평균 공헌이익률 -->
+<div class="p-space-md rounded-xl bg-surface-card shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-text-muted">평균 공헌이익률</span>
+<span class="px-1.5 py-0.5 rounded bg-metric-positive-surface text-metric-positive font-label-sm text-label-sm font-semibold">건전 구간</span>
+</div>
+<div class="my-space-xs flex items-baseline gap-1.5">
+<span class="font-metric-stat-lg text-metric-stat-lg text-metric-positive">67.0%</span>
+<span class="font-tabular-numeric text-tabular-numeric text-text-muted">합계 8,361,600원</span>
+</div>
+<div class="w-full bg-surface-subtle h-1.5 rounded-full overflow-hidden">
+<div class="bg-metric-positive h-full rounded-full" style="width: 67%;"></div>
+</div>
+</div>
+<!-- Card 4: 최고 수익 효자 메뉴 -->
+<div class="p-space-md rounded-xl bg-surface-card shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-text-muted">최고 수익 효자 메뉴</span>
+<span class="px-1.5 py-0.5 rounded bg-status-projected-bg text-status-projected-text font-label-sm text-label-sm font-semibold">이익 기여 1위</span>
+</div>
+<div class="my-space-xs">
+<span class="font-metric-stat-md text-metric-stat-md text-espresso-dark">아메리카노(ICE)</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-text-muted">전체 이익 기여도</span>
+<span class="font-headline-md text-headline-md text-espresso-amber font-bold leading-none">38.2%</span>
+</div>
+</div>
+</div>
+<!-- Visualizer Bento Section: Contribution Waterfall & Category Mix -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
+<!-- Mini Graphic: Contribution Breakdown Chart (2 Cols) -->
+<div class="lg:col-span-2 p-space-md rounded-xl bg-surface-card shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-text-primary font-semibold">메뉴별 공헌이익 상위 비중 시각화</span>
+<span class="font-label-sm text-label-sm text-text-muted">순매출 기준 공헌이익 및 직접비용(원가+포장+수수료) 구조</span>
+</div>
+<div class="flex items-center gap-space-sm font-label-sm text-label-sm">
+<div class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-sm bg-primary"></span><span>공헌이익</span></div>
+<div class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-sm bg-espresso-amber"></span><span>식재료비</span></div>
+<div class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-sm bg-surface-variant"></span><span>포장·수수료</span></div>
+</div>
+</div>
+<!-- Stacked Visualizer Bars for top 4 items -->
+<div class="space-y-3 pt-1">
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="font-semibold text-text-primary">아메리카노(ICE) · 6,390,000원</span>
+<span class="text-metric-positive font-bold">마진 76.8% (4,905,430원)</span>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-subtle overflow-hidden flex">
+<div class="bg-primary h-full" style="width: 76.8%;" title="공헌이익 76.8%"></div>
+<div class="bg-espresso-amber h-full" style="width: 19.5%;" title="식재료비 19.5%"></div>
+<div class="bg-slate-400 h-full" style="width: 3.7%;" title="포장/수수료 3.7%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="font-semibold text-text-primary">카페라떼(HOT) · 2,900,000원</span>
+<span class="text-text-primary font-bold">마진 65.6% (1,902,300원)</span>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-subtle overflow-hidden flex">
+<div class="bg-primary h-full" style="width: 65.6%;"></div>
+<div class="bg-espresso-amber h-full" style="width: 31.0%;"></div>
+<div class="bg-slate-400 h-full" style="width: 3.4%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="font-semibold text-text-primary">바닐라라떼(ICE) · 1,870,000원</span>
+<span class="text-text-primary font-bold">마진 62.0% (1,159,790원)</span>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-subtle overflow-hidden flex">
+<div class="bg-primary h-full" style="width: 62.0%;"></div>
+<div class="bg-espresso-amber h-full" style="width: 34.2%;"></div>
+<div class="bg-slate-400 h-full" style="width: 3.8%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="font-semibold text-text-primary">바스크 치즈케이크 · 1,885,000원</span>
+<span class="text-espresso-amber font-bold">마진 54.0% (1,018,645원)</span>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-subtle overflow-hidden flex">
+<div class="bg-primary h-full" style="width: 54.0%;"></div>
+<div class="bg-espresso-amber h-full" style="width: 41.5%;"></div>
+<div class="bg-slate-400 h-full" style="width: 4.5%;"></div>
+</div>
+</div>
+</div>
+<div class="mt-space-sm pt-2 flex items-center justify-between text-text-muted font-label-sm text-label-sm">
+<span>* 마진율(%) = (공헌이익 ÷ 순매출액) × 100</span>
+<span class="text-text-primary font-medium">상위 4개 품목이 전체 매출의 80.5% 점유</span>
+</div>
+</div>
+<!-- Right Side Mini Card: Category Profit Comparison -->
+<div class="p-space-md rounded-xl bg-surface-card shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-text-primary font-semibold">카테고리별 마진 격차</span>
+<span class="material-symbols-outlined text-text-muted text-[18px]">pie_chart</span>
+</div>
+<!-- Category Comparison visual -->
+<div class="space-y-4 my-2">
+<div class="p-space-sm rounded-lg bg-surface-subtle flex flex-col gap-1">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-espresso-amber"></span>
+<span class="font-label-md text-label-md font-semibold text-text-primary">음료 (6개 품목)</span>
+</div>
+<span class="font-label-md text-label-md font-bold text-metric-positive">평균 70.4%</span>
+</div>
+<div class="flex justify-between text-text-muted font-tabular-numeric text-tabular-numeric text-[12px]">
+<span>순매출 13,800,000원</span>
+<span>공헌이익 6,813,725원</span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-subtle flex flex-col gap-1">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-md text-label-md font-semibold text-text-primary">디저트 (2개 품목)</span>
+</div>
+<span class="font-label-md text-label-md font-bold text-status-projected-text">평균 53.8%</span>
+</div>
+<div class="flex justify-between text-text-muted font-tabular-numeric text-tabular-numeric text-[12px]">
+<span>순매출 2,875,000원</span>
+<span>공헌이익 1,547,875원</span>
+</div>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-metric-positive-surface text-metric-positive font-label-sm text-label-sm">
+        💡 음료군의 원가 효율이 디저트 대비 <strong>+16.6%p</strong> 우수하여 세트 판매 시 음료 업셀링이 유효합니다.
+      </div>
+</div>
+</div>
+<!-- Profitability Visual Table -->
+<div class="rounded-xl bg-surface-card shadow-sm overflow-hidden flex flex-col">
+<div class="px-space-md py-3 bg-surface-subtle flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-text-primary">table_chart</span>
+<span class="font-label-md text-label-md text-text-primary font-bold">메뉴별 원가 및 공헌이익 명세</span>
+</div>
+<span class="font-label-sm text-label-sm text-text-muted">전체 8개 실적 확정 품목</span>
+</div>
+<!-- Data Table Container (Responsive Horizontal Scroll) -->
+<div class="overflow-x-auto w-full">
+<table class="w-full border-collapse text-left" id="profitabilityTable">
+<thead>
+<tr class="bg-surface-subtle font-label-sm text-label-sm text-text-muted tracking-tight">
+<th class="py-2.5 px-space-md font-semibold whitespace-nowrap">메뉴명</th>
+<th class="py-2.5 px-space-sm font-semibold whitespace-nowrap">분류</th>
+<th class="py-2.5 px-space-md font-semibold text-right whitespace-nowrap">판매수량 (매장 / 포장)</th>
+<th class="py-2.5 px-space-md font-semibold text-right whitespace-nowrap">순매출액</th>
+<th class="py-2.5 px-space-md font-semibold text-right whitespace-nowrap">식재료비 (원가율)</th>
+<th class="py-2.5 px-space-md font-semibold text-right whitespace-nowrap">포장재비</th>
+<th class="py-2.5 px-space-md font-semibold text-right whitespace-nowrap">결제수수료</th>
+<th class="py-2.5 px-space-md font-semibold text-right whitespace-nowrap text-text-primary">공헌이익 (원)</th>
+<th class="py-2.5 px-space-md font-semibold text-right whitespace-nowrap">마진율 (%)</th>
+<th class="py-2.5 px-space-md font-semibold text-center whitespace-nowrap">수익성 평가</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-text-primary font-tabular-numeric text-tabular-numeric">
+<!-- Item 1: 아메리카노(ICE) -->
+<tr class="hover:bg-surface-subtle transition-colors group" data-category="beverage" data-cost="19.5" data-margin="76.8" data-profit="4905430" data-sales="6390000">
+<td class="py-3 px-space-md font-semibold text-text-primary flex items-center gap-2 whitespace-nowrap">
+<span class="w-1.5 h-1.5 rounded-full bg-espresso-amber"></span>
+<span>아메리카노(ICE)</span>
+<span class="material-symbols-outlined text-[15px] text-espresso-amber" title="매장 최다 판매">star</span>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="px-2 py-0.5 rounded-md bg-takeout-badge-bg text-takeout-badge-text font-label-sm text-label-sm">음료</span>
+</td>
+<td class="py-3 px-space-md text-right whitespace-nowrap">
+<span class="font-bold text-text-primary">1,420개</span>
+<span class="text-text-muted text-[11px] block">(매장 980 / 포장 440)</span>
+</td>
+<td class="py-3 px-space-md text-right font-medium whitespace-nowrap">6,390,000원</td>
+<td class="py-3 px-space-md text-right whitespace-nowrap">
+<span class="text-text-primary">1,249,600원</span>
+<span class="text-metric-positive font-label-sm text-label-sm block">(19.5%)</span>
+</td>
+<td class="py-3 px-space-md text-right text-text-muted whitespace-nowrap">88,000원</td>
+<td class="py-3 px-space-md text-right text-text-muted whitespace-nowrap">146,970원</td>
+<td class="py-3 px-space-md text-right font-bold text-text-primary bg-surface-subtle/50 whitespace-nowrap">
+              4,905,430원
+            </td>
+<td class="py-3 px-space-md text-right whitespace-nowrap font-bold text-metric-positive">
+              76.8%
+            </td>
+<td class="py-3 px-space-md text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-metric-positive-surface text-metric-positive font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-metric-positive"></span>
+                우수 High Margin
+              </span>
+</td>
+</tr>
+<!-- Item 2: 카페라떼(HOT) -->
+<tr class="hover:bg-surface-subtle transition-colors group" data-category="beverage" data-cost="31.0" data-margin="65.6" data-profit="1902300" data-sales="2900000">
+<td class="py-3 px-space-md font-semibold text-text-primary flex items-center gap-2 whitespace-nowrap">
+<span class="w-1.5 h-1.5 rounded-full bg-espresso-amber"></span>
+<span>카페라떼(HOT)</span>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="px-2 py-0.5 rounded-md bg-takeout-badge-bg text-takeout-badge-text font-label-sm text-label-sm">음료</span>
+</td>
+<td class="py-3 px-space-md text-right whitespace-nowrap">
+<span class="font-bold text-text-primary">580개</span>
+<span class="text-text-muted text-[11px] block">(매장 420 / 포장 160)</span>
+</td>
+<td class="py-3 px-space-md text-right font-medium whitespace-nowrap">2,900,000원</td>
+<td class="py-3 px-space-md text-right whitespace-nowrap">
+<span class="text-text-primary">899,000원</span>
+<span class="text-text-muted font-label-sm text-label-sm block">(31.0%)</span>
+</td>
+<td class="py-3 px-space-md text-right text-text-muted whitespace-nowrap">32,000원</td>
+<td class="py-3 px-space-md text-right text-text-muted whitespace-nowrap">66,700원</td>
+<td class="py-3 px-space-md text-right font-bold text-text-primary bg-surface-subtle/50 whitespace-nowrap">
+              1,902,300원
+            </td>
+<td class="py-3 px-space-md text-right whitespace-nowrap font-bold text-text-primary">
+              65.6%
+            </td>
+<td class="py-3 px-space-md text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-subtle text-text-primary font-label-sm text-label-sm font-semibold">
+                안정
+              </span>
+</td>
+</tr>
+<!-- Item 3: 바스크 치즈케이크 -->
+<tr class="hover:bg-surface-subtle transition-colors group" data-category="dessert" data-cost="41.5" data-margin="54.0" data-profit="1018645" data-sales="1885000">
+<td class="py-3 px-space-md font-semibold text-text-primary flex items-center gap-2 whitespace-nowrap">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>바스크 치즈케이크</span>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="px-2 py-0.5 rounded-md bg-store-badge-bg text-store-badge-text font-label-sm text-label-sm">디저트</span>
+</td>
+<td class="py-3 px-space-md text-right whitespace-nowrap">
+<span class="font-bold text-text-primary">290개</span>
+<span class="text-text-muted text-[11px] block">(매장 210 / 포장 80)</span>
+</td>
+<td class="py-3 px-space-md text-right font-medium whitespace-nowrap">1,885,000원</td>
+<td class="py-3 px-space-md text-right whitespace-nowrap">
+<span class="text-text-primary">783,000원</span>
+<span class="text-metric-negative font-label-sm text-label-sm block font-semibold">(41.5%)</span>
+</td>
+<td class="py-3 px-space-md text-right text-text-muted whitespace-nowrap">40,000원</td>
+<td class="py-3 px-space-md text-right text-text-muted whitespace-nowrap">43,355원</td>
+<td class="py-3 px-space-md text-right font-bold text-text-primary bg-surface-subtle/50 whitespace-nowrap">
+              1,018,645원
+            </td>
+<td class="py-3 px-space-md text-right whitespace-nowrap font-bold text-status-projected-text">
+              54.0%
+            </td>
+<td class="py-3 px-space-md text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-status-projected-bg text-status-projected-text font-label-sm text-label-sm font-semibold">
+                주의 원가율 높음
+              </span>
+</td>
+</tr>
+<!-- Item 4: 바닐라라떼(ICE) -->
+<tr class="hover:bg-surface-subtle transition-colors group" data-category="beverage" data-cost="34.2" data-margin="62.0" data-profit="1159790" data-sales="1870000">
+<td class="py-3 px-space-md font-semibold text-text-primary flex items-center gap-2 whitespace-nowrap">
+<span class="w-1.5 h-1.5 rounded-full bg-espresso-amber"></span>
+<span>바닐라라떼(ICE)</span>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="px-2 py-0.5 rounded-md bg-takeout-badge-bg text-takeout-badge-text font-label-sm text-label-sm">음료</span>
+</td>
+<td class="py-3 px-space-md text-right whitespace-nowrap">
+<span class="font-bold text-text-primary">340개</span>
+<span class="text-text-muted text-[11px] block">(매장 200 / 포장 140)</span>
+</td>
+<td class="py-3 px-space-md text-right font-medium whitespace-nowrap">1,870,000원</td>
+<td class="py-3 px-space-md text-right whitespace-nowrap">
+<span class="text-text-primary">639,200원</span>
+<span class="text-text-muted font-label-sm text-label-sm block">(34.2%)</span>
+</td>
+<td class="py-3 px-space-md text-right text-text-muted whitespace-nowrap">28,000원</td>
+<td class="py-3 px-space-md text-right text-text-muted whitespace-nowrap">43,010원</td>
+<td class="py-3 px-space-md text-right font-bold text-text-primary bg-surface-subtle/50 whitespace-nowrap">
+              1,159,790원
+            </td>
+<td class="py-3 px-space-md text-right whitespace-nowrap font-bold text-text-primary">
+              62.0%
+            </td>
+<td class="py-3 px-space-md text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-subtle text-text-primary font-label-sm text-label-sm font-semibold">
+                안정
+              </span>
+</td>
+</tr>
+<!-- Item 5: 콜드브루 -->
+<tr class="hover:bg-surface-subtle transition-colors group" data-category="beverage" data-cost="22.0" data-margin="74.2" data-profit="778850" data-sales="1050000">
+<td class="py-3 px-space-md font-semibold text-text-primary flex items-center gap-2 whitespace-nowrap">
+<span class="w-1.5 h-1.5 rounded-full bg-espresso-amber"></span>
+<span>콜드브루</span>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="px-2 py-0.5 rounded-md bg-takeout-badge-bg text-takeout-badge-text font-label-sm text-label-sm">음료</span>
+</td>
+<td class="py-3 px-space-md text-right whitespace-nowrap">
+<span class="font-bold text-text-primary">210개</span>
+<span class="text-text-muted text-[11px] block">(매장 130 / 포장 80)</span>
+</td>
+<td class="py-3 px-space-md text-right font-medium whitespace-nowrap">1,050,000원</td>
+<td class="py-3 px-space-md text-right whitespace-nowrap">
+<span class="text-text-primary">231,000원</span>
+<span class="text-metric-positive font-label-sm text-label-sm block">(22.0%)</span>
+</td>
+<td class="py-3 px-space-md text-right text-text-muted whitespace-nowrap">16,000원</td>
+<td class="py-3 px-space-md text-right text-text-muted whitespace-nowrap">24,150원</td>
+<td class="py-3 px-space-md text-right font-bold text-text-primary bg-surface-subtle/50 whitespace-nowrap">
+              778,850원
+            </td>
+<td class="py-3 px-space-md text-right whitespace-nowrap font-bold text-metric-positive">
+              74.2%
+            </td>
+<td class="py-3 px-space-md text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-metric-positive-surface text-metric-positive font-label-sm text-label-sm font-semibold">
+                우수
+              </span>
+</td>
+</tr>
+<!-- Item 6: 카라멜 마키아또 -->
+<tr class="hover:bg-surface-subtle transition-colors group" data-category="beverage" data-cost="35.0" data-margin="61.7" data-profit="591920" data-sales="960000">
+<td class="py-3 px-space-md font-semibold text-text-primary flex items-center gap-2 whitespace-nowrap">
+<span class="w-1.5 h-1.5 rounded-full bg-espresso-amber"></span>
+<span>카라멜 마키아또</span>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="px-2 py-0.5 rounded-md bg-takeout-badge-bg text-takeout-badge-text font-label-sm text-label-sm">음료</span>
+</td>
+<td class="py-3 px-space-md text-right whitespace-nowrap">
+<span class="font-bold text-text-primary">160개</span>
+<span class="text-text-muted text-[11px] block">(매장 110 / 포장 50)</span>
+</td>
+<td class="py-3 px-space-md text-right font-medium whitespace-nowrap">960,000원</td>
+<td class="py-3 px-space-md text-right whitespace-nowrap">
+<span class="text-text-primary">336,000원</span>
+<span class="text-text-muted font-label-sm text-label-sm block">(35.0%)</span>
+</td>
+<td class="py-3 px-space-md text-right text-text-muted whitespace-nowrap">10,000원</td>
+<td class="py-3 px-space-md text-right text-text-muted whitespace-nowrap">22,080원</td>
+<td class="py-3 px-space-md text-right font-bold text-text-primary bg-surface-subtle/50 whitespace-nowrap">
+              591,920원
+            </td>
+<td class="py-3 px-space-md text-right whitespace-nowrap font-bold text-text-primary">
+              61.7%
+            </td>
+<td class="py-3 px-space-md text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-subtle text-text-primary font-label-sm text-label-sm font-semibold">
+                안정
+              </span>
+</td>
+</tr>
+<!-- Item 7: 얼그레이 티 -->
+<tr class="hover:bg-surface-subtle transition-colors group" data-category="beverage" data-cost="13.3" data-margin="83.1" data-profit="523510" data-sales="630000">
+<td class="py-3 px-space-md font-semibold text-text-primary flex items-center gap-2 whitespace-nowrap">
+<span class="w-1.5 h-1.5 rounded-full bg-espresso-amber"></span>
+<span>얼그레이 티</span>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="px-2 py-0.5 rounded-md bg-takeout-badge-bg text-takeout-badge-text font-label-sm text-label-sm">음료</span>
+</td>
+<td class="py-3 px-space-md text-right whitespace-nowrap">
+<span class="font-bold text-text-primary">140개</span>
+<span class="text-text-muted text-[11px] block">(매장 100 / 포장 40)</span>
+</td>
+<td class="py-3 px-space-md text-right font-medium whitespace-nowrap">630,000원</td>
+<td class="py-3 px-space-md text-right whitespace-nowrap">
+<span class="text-text-primary">84,000원</span>
+<span class="text-metric-positive font-label-sm text-label-sm block font-bold">(13.3%)</span>
+</td>
+<td class="py-3 px-space-md text-right text-text-muted whitespace-nowrap">8,000원</td>
+<td class="py-3 px-space-md text-right text-text-muted whitespace-nowrap">14,490원</td>
+<td class="py-3 px-space-md text-right font-bold text-text-primary bg-surface-subtle/50 whitespace-nowrap">
+              523,510원
+            </td>
+<td class="py-3 px-space-md text-right whitespace-nowrap font-bold text-metric-positive">
+              83.1%
+            </td>
+<td class="py-3 px-space-md text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-metric-positive-surface text-metric-positive font-label-sm text-label-sm font-semibold">
+                최우수 초저원가
+              </span>
+</td>
+</tr>
+<!-- Item 8: 초코 브라우니 -->
+<tr class="hover:bg-surface-subtle transition-colors group" data-category="dessert" data-cost="41.8" data-margin="53.5" data-profit="529230" data-sales="990000">
+<td class="py-3 px-space-md font-semibold text-text-primary flex items-center gap-2 whitespace-nowrap">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>초코 브라우니</span>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="px-2 py-0.5 rounded-md bg-store-badge-bg text-store-badge-text font-label-sm text-label-sm">디저트</span>
+</td>
+<td class="py-3 px-space-md text-right whitespace-nowrap">
+<span class="font-bold text-text-primary">180개</span>
+<span class="text-text-muted text-[11px] block">(매장 120 / 포장 60)</span>
+</td>
+<td class="py-3 px-space-md text-right font-medium whitespace-nowrap">990,000원</td>
+<td class="py-3 px-space-md text-right whitespace-nowrap">
+<span class="text-text-primary">414,000원</span>
+<span class="text-metric-negative font-label-sm text-label-sm block font-semibold">(41.8%)</span>
+</td>
+<td class="py-3 px-space-md text-right text-text-muted whitespace-nowrap">24,000원</td>
+<td class="py-3 px-space-md text-right text-text-muted whitespace-nowrap">22,770원</td>
+<td class="py-3 px-space-md text-right font-bold text-text-primary bg-surface-subtle/50 whitespace-nowrap">
+              529,230원
+            </td>
+<td class="py-3 px-space-md text-right whitespace-nowrap font-bold text-status-projected-text">
+              53.5%
+            </td>
+<td class="py-3 px-space-md text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-status-projected-bg text-status-projected-text font-label-sm text-label-sm font-semibold">
+                주의 원가율 높음
+              </span>
+</td>
+</tr>
+</tbody>
+<tfoot class="bg-surface-subtle font-label-md text-label-md text-text-primary font-bold">
+<tr>
+<td class="py-3 px-space-md" colspan="2">합계 / 가중 평균</td>
+<td class="py-3 px-space-md text-right font-tabular-numeric">3,320개</td>
+<td class="py-3 px-space-md text-right font-tabular-numeric">12,480,000원</td>
+<td class="py-3 px-space-md text-right font-tabular-numeric">3,369,600원 (27.0%)</td>
+<td class="py-3 px-space-md text-right font-tabular-numeric">461,800원</td>
+<td class="py-3 px-space-md text-right font-tabular-numeric">287,000원</td>
+<td class="py-3 px-space-md text-right font-tabular-numeric text-primary text-[14px]">8,361,600원</td>
+<td class="py-3 px-space-md text-right font-tabular-numeric text-metric-positive">67.0%</td>
+<td class="py-3 px-space-md text-center font-label-sm text-label-sm text-text-muted">8개 품목 전체</td>
+</tr>
+</tfoot>
+</table>
+</div>
+</div>
+<!-- Bottom Actionable Insight Panel -->
+<div class="p-space-lg rounded-xl bg-surface-card shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-xl bg-takeout-badge-bg text-takeout-badge-text flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">takeout_dining</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-headline-md text-text-primary">채널별 포장재 차이 분석</span>
+<span class="px-2 py-0.5 rounded-full bg-takeout-badge-bg text-takeout-badge-text font-label-sm text-label-sm font-semibold">채널 격차 -4.2%p</span>
+</div>
+<p class="font-body-md text-body-md text-text-muted">
+          포장 주문 시 일회용 컵/캐리어/케이크 상자 원가(평균 건당 200~500원)가 추가 반영되어, 동일 메뉴 매장 대비 마진율이 약 <strong class="text-text-primary font-semibold">4.2%p</strong> 낮습니다.
+        </p>
+</div>
+</div>
+<!-- Optimization CTA -->
+<div class="flex items-center gap-space-sm self-end md:self-auto shrink-0">
+<button class="px-3.5 py-2 rounded-xl bg-surface-subtle text-text-primary font-label-md text-label-md font-semibold hover:bg-slate-200 transition-colors" type="button">
+        포장재 단가 일괄 수정
+      </button>
+<button class="px-4 py-2 rounded-xl bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-primary-container shadow-sm transition-colors" type="button">
+        포장비 옵션 추가 검토
+      </button>
+</div>
+</div>
+</div>
+<script>
+  // Simple interactive filtering & sorting for Table
+  (function initMenuProfitability() {
+    const categoryButtons = document.querySelectorAll('#categoryFilter .category-btn');
+    const sortSelect = document.getElementById('sortSelect');
+    const tableBody = document.querySelector('#profitabilityTable tbody');
+
+    if (!categoryButtons.length || !sortSelect || !tableBody) return;
+
+    // Filter Logic
+    categoryButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        categoryButtons.forEach(b => {
+          b.classList.remove('bg-surface-card', 'font-semibold', 'text-text-primary', 'shadow-xs');
+          b.classList.add('text-text-muted');
+        });
+        btn.classList.add('bg-surface-card', 'font-semibold', 'text-text-primary', 'shadow-xs');
+        btn.classList.remove('text-text-muted');
+
+        const filter = btn.getAttribute('data-filter');
+        const rows = tableBody.querySelectorAll('tr');
+
+        rows.forEach(row => {
+          const rowCategory = row.getAttribute('data-category');
+          if (filter === 'all' || rowCategory === filter) {
+            row.style.display = '';
+          } else {
+            row.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Sort Logic
+    sortSelect.addEventListener('change', () => {
+      const criteria = sortSelect.value;
+      const rows = Array.from(tableBody.querySelectorAll('tr'));
+
+      rows.sort((a, b) => {
+        if (criteria === 'profit-desc') {
+          return parseFloat(b.getAttribute('data-profit')) - parseFloat(a.getAttribute('data-profit'));
+        } else if (criteria === 'margin-desc') {
+          return parseFloat(b.getAttribute('data-margin')) - parseFloat(a.getAttribute('data-margin'));
+        } else if (criteria === 'sales-desc') {
+          return parseFloat(b.getAttribute('data-sales')) - parseFloat(a.getAttribute('data-sales'));
+        } else if (criteria === 'cost-desc') {
+          return parseFloat(b.getAttribute('data-cost')) - parseFloat(a.getAttribute('data-cost'));
+        }
+        return 0;
+      });
+
+      rows.forEach(row => tableBody.appendChild(row));
+    });
+  })();
+</script></main></div></body></html>

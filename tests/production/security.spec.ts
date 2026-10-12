@@ -1,0 +1,9 @@
+import {test,expect} from '@playwright/test';
+test('운영 빌드·보안 헤더에서 비용 저장·백업 다운로드·복원, 외부 자료 전송 없음',async({page})=>{
+ const external:string[]=[];page.on('request',r=>{if(new URL(r.url()).hostname!=='127.0.0.1')external.push(r.url());});
+ await page.addInitScript(()=>{(window as unknown as {violations:string[]}).violations=[];document.addEventListener('securitypolicyviolation',e=>(window as unknown as {violations:string[]}).violations.push(e.violatedDirective));});
+ const response=await page.goto('/#/profit-loss?mode=day&value=2026-09-19');expect(response!.headers()['content-security-policy']).toContain("script-src 'self'");expect(response!.headers()['x-content-type-options']).toBe('nosniff');
+ await expect(page.getByRole('heading',{name:'기간 실적 및 매장 손익',exact:true})).toBeVisible();await page.getByRole('button',{name:'비용 기록 입력',exact:true}).click();const d=page.getByRole('dialog',{name:'비용 기록 입력',exact:true});await d.getByLabel('비용항목').selectOption('광고비');await d.getByLabel('비용 금액').fill('10000');await d.getByRole('button',{name:'비용 저장하기'}).click();await expect(d).not.toBeVisible();await page.reload();await expect(page.getByRole('table',{name:'비용 기록',exact:true})).toContainText('10,000원');
+ await page.getByRole('button',{name:'백업·복원',exact:true}).click();const promise=page.waitForEvent('download');await page.getByRole('button',{name:'전체 백업 다운로드'}).click();const file=await promise;const path=await file.path();await page.getByLabel('백업 파일 선택').setInputFiles(path!);await expect(page.getByRole('region',{name:'복원 후보 요약'})).toBeVisible();page.once('dialog',d=>d.accept());await page.getByRole('button',{name:'전체 자료 복원',exact:true}).click();await expect(page.getByRole('status')).toContainText('복원과 저장이 완료');
+ expect(await page.evaluate(()=>(window as unknown as {violations:string[]}).violations)).toEqual([]);expect(external).toEqual([]);
+});
